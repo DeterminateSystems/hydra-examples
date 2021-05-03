@@ -1,0 +1,40 @@
+{
+  "nixpkgs": {
+    "enabled": 1,
+    "visible": true,
+    "description": "Nixpkgs",
+    "nixexprinput": "nixpkgs",
+    "nixexprpath": "pkgs/top-level/release.nix",
+    "checkinterval": 300,
+    "schedulingshares": 100,
+    "enableemail": false,
+    "emailoverride": "",
+    "keepnr": 3,
+    "inputs": {
+      "nixpkgs": {
+        "type": "git",
+        "value": "git://github.com/NixOS/nixpkgs.git master",
+        "emailresponsible": false
+      }
+    }
+  },
+  "nixos": {
+    "enabled": 1,
+    "visible": true,
+    "description": "NixOS: Small Evaluation",
+    "nixexprinput": "nixpkgs",
+    "nixexprpath": "nixos/release-small.nix",
+    "checkinterval": 300,
+    "schedulingshares": 100,
+    "enableemail": false,
+    "emailoverride": "",
+    "keepnr": 3,
+    "inputs": {
+      "nixpkgs": {
+        "type": "git",
+        "value": "git://github.com/NixOS/nixpkgs.git master",
+        "emailresponsible": false
+      }
+    }
+  }
+}
