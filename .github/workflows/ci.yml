@@ -1,0 +1,22 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install Nix
+        uses: cachix/install-nix-action@v13
+      - name: Check JSON files are valid JSON
+        run: |
+          nix-shell --run '
+            for file in $(find . -type f -name '*.json'); do
+              jq < $file || exit 1
+            done
+          '
