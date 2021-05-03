@@ -1,7 +1,7 @@
 {
   "nixpkgs": {
     "enabled": 1,
-    "visible": true,
+    "hidden": false,
     "description": "Nixpkgs",
     "nixexprinput": "nixpkgs",
     "nixexprpath": "pkgs/top-level/release.nix",
@@ -20,7 +20,7 @@
   },
   "nixos": {
     "enabled": 1,
-    "visible": true,
+    "hidden": false,
     "description": "NixOS: Small Evaluation",
     "nixexprinput": "nixpkgs",
     "nixexprpath": "nixos/release-small.nix",
