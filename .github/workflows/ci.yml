@@ -12,7 +12,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Install Nix
-        uses: cachix/install-nix-action@v13
+        uses: DeterminateSystems/nix-installer-action@v1
       - name: Check JSON files are valid JSON
         run: |
           nix-shell --run '
